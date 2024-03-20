@@ -1,0 +1,34 @@
+{
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.vue",
+    "./src/vite/auto-imports.d.ts"
+  ],
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "es2020",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/views": [
+        "./src/views/*"
+      ],
+      "@/locales": [
+        "./src/locales/*"
+      ]
+    },
+    "target": "ES2020",
+    "outDir": "./dist",
+    "declaration": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

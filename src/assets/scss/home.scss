@@ -1,0 +1,291 @@
+.reg_slot {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: url("@/assets/img/slot.jpg") center top no-repeat;
+
+  .are_slot {
+    position: relative;
+    left: 50%;
+    width: 574px;
+    height: 655px;
+    padding-top: 206px;
+    margin-left: -574px;
+    background: url("@/assets/img/slot_jackpot.png") center top no-repeat;
+
+    .slotJackpot {
+      &_title {
+        font-size: 50px;
+        font-weight: 900;
+        text-align: center;
+        color: #fffc00;
+      }
+
+      &_list {
+        width: 447px;
+        height: 300px;
+        margin: 27px auto 0;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          width: 3px;
+          height: 3px;
+          background: none;
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          box-shadow: none;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: rgba(#920909, 0.2);
+          border-radius: 10px;
+        }
+
+        li {
+          padding: 5px 0;
+          margin-bottom: 2px;
+          background-image: linear-gradient(
+            to left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0.2) 30%,
+            rgba(0, 0, 0, 0.2) 80%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          text-align: center;
+        }
+
+        .user {
+          font-size: 22px;
+          color: #fff;
+
+          span {
+            font-size: 22px;
+            color: #03fffc;
+          }
+        }
+
+        .money {
+          font-size: 35px;
+          font-weight: 500;
+          color: #fffc00;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  width: 1300px;
+  display: flex;
+  margin: auto;
+
+  .aside {
+    width: 290px;
+    padding: 50px 22px 0;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4) 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+    &_list {
+      li,
+      a {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        cursor: pointer;
+
+        span {
+          width: 30%;
+          display: inline-block;
+          font-size: 20px;
+          font-weight: bold;
+          vertical-align: middle;
+        }
+
+        .i {
+          width: 50%;
+          height: 64px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        &.active,
+        &:hover {
+          background: url("@/assets/img/btn_gold2.jpg") no-repeat left center;
+          background-size: cover;
+          border-radius: 14px;
+          box-shadow: inset 0 0 2px 2px #ffffac, 0 0 15px 0 #009cffab;
+
+          span {
+            color: #000;
+            text-shadow: 1px 0 2px rgba(#fff, 0.2);
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    width: calc(100% - 310px);
+    margin: 40px 0 0 20px;
+
+    .main_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+
+      .tabs {
+        display: flex;
+        gap: 14px;
+
+        .tab {
+          height: 38px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0 30px;
+          font-size: 16px;
+          font-weight: 600;
+          color: rgba(#0196ff, 0.5);
+          border: 1px solid rgba(#0196ff, 0.5);
+          border-radius: 20px;
+          cursor: pointer;
+
+          &.active,
+          &:hover {
+            color: #000;
+            background: #009cff;
+            border-color: #0196ff;
+            box-shadow: 0 0 2px rgba(#000, 0.5);
+          }
+        }
+      }
+    }
+
+    .panel_wrap {
+      display: flex;
+      flex-wrap: wrap;
+
+      .panel_gamelist {
+        margin: 10px;
+        cursor: pointer;
+
+        .panel_img {
+          margin-bottom: 10px;
+        }
+      }
+
+      .panel_name {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+        background: #00518b;
+        line-height: 40px;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+
+        .el-icon {
+          cursor: pointer;
+
+          svg {
+            font-size: 24px;
+          }
+        }
+
+        .i-fav {
+          position: absolute;
+          top: 50%;
+          right: 8px;
+          width: 24px;
+          height: 23px;
+          margin-top: -12px;
+          background: url("@/assets/img/icon/icon-fav.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          cursor: pointer;
+
+          &.active {
+            background: url("@/assets/img/icon/icon-fav-active.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+
+    .image {
+      width: 100%;
+    }
+  }
+}
+
+$aside-icon: (
+  "fav": "icon-fav3",
+  "Royal": "icon-RSG",
+  "JDB": "icon-JDB",
+  "PG": "icon-PG",
+  "DS": "icon-DS",
+  "AE": "icon-Ameba",
+  "PP": "icon-pp",
+  "NEXTSPIN": "icon_02_nextspin",
+  "FC": "icon-fc",
+  "TP": "icon_02_tp",
+  "JILI": "icon_02_jili",
+  "JOKER": "icon_02_joker",
+  "GR": "icon_02_gr",
+  "META": "icon_02_meta",
+  "Golden": "icon_02_gold",
+  "MG": "icon_02_mg",
+  "RTG": "icon-RTG",
+  "MP": "icon-MP",
+  "MT": "icon-MT",
+  "about": "icon-07-about",
+  "casino": "icon-07-casino",
+  "help": "icon-07-help",
+  "rules": "icon-07-rules",
+  "privacy": "icon-07-privacy",
+  "notice": "icon-08-notice",
+  "report": "icon-08-report",
+  "record": "icon-08-record",
+  "cgpwd": "icon-08-cgpwd",
+);
+
+@each $name, $bg in $aside-icon {
+  .i-#{$name} {
+    background: url("@/assets/img/icon/#{$bg}.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .active {
+    .i-#{$name} {
+      background: url("@/assets/img/icon/#{$bg}-active.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.ipt_search {
+  padding: 10px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #009cff;
+  border-radius: 5px;
+  outline: none;
+}

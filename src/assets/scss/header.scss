@@ -1,0 +1,111 @@
+.header {
+  height: 171px;
+}
+
+.sec_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  z-index: 5;
+  background: url("@/assets/img//bg_header.jpg") no-repeat #070e1b;
+
+  .reg_head {
+    position: relative;
+    width: 1300px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 0 0;
+    margin: 0 auto 18px;
+
+    .lnk_logo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 192px;
+      height: 52px;
+      display: inline-block;
+      background: url("@/assets/img/logo.png") left top no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .hr_gold {
+    height: 2px;
+    background: url("@/assets/img/hr_gold.svg") no-repeat;
+    background-size: 100% 2px;
+  }
+
+  .nav {
+    width: 1200px;
+    min-height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(7, 14, 27, 1) 30%,
+      rgba(7, 14, 27, 1) 70%,
+      transparent 100%
+    );
+
+    .li_nav {
+      padding: 11px 5px 8px;
+
+      .lnk_nav {
+        min-width: 105px;
+        display: block;
+        padding-top: 52px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        transition: 0.3s;
+
+        .txt_nav {
+          display: block;
+          font-size: 16px;
+          text-align: center;
+          color: #fff;
+        }
+
+        &.i_live {
+          background-image: url("@/assets/img/icon_live.png");
+        }
+
+        &.i_slot {
+          background-image: url("@/assets/img/icon_slot.png");
+        }
+
+        &.i_fish {
+          background-image: url("@/assets/img/icon_fish.png");
+        }
+
+        &.i_lottery {
+          background-image: url("@/assets/img/icon_lottery.png");
+        }
+
+        &.i_sport {
+          background-image: url("@/assets/img/icon_sport.png");
+        }
+
+        &.i_table {
+          background-image: url("@/assets/img/icon_card.png");
+        }
+
+        &.i_promotion {
+          background-image: url("@/assets/img/icon_promotion.png");
+        }
+
+        &.i_animal {
+          background-image: url("@/assets/img/icon_animal.png");
+        }
+
+        &.i_esport {
+          background-image: url("@/assets/img/icon_esport.png");
+        }
+      }
+    }
+  }
+}
